@@ -1,0 +1,71 @@
+{% extends 'home.html' %}
+{% block title %}
+    {{title}}
+{% endblock title %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+    <link rel="stylesheet" href="/static/about.css">
+</head>
+<body>
+    <div class="aboutus-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="aboutus">
+                        <h2 class="aboutus-title">About</h2>
+                        <p class="aboutus-text">This is a IBM nalayathiran assignment.</p>
+                        <p class="aboutus-text">This is a basic webpage where we can sign up with user details and we can login with those details.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-5 col-sm-6 col-xs-12">
+                    <div class="feature">
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-cog icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Technologies used</h4>
+                                    <p>I have use Flask as a framework html and css for building the webpage and i used sqllite3 for database connectivity.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-cog icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Flask</h4>
+                                    <p>Flask is a small and lightweight Python web framework that provides useful tools and features that make creating web applications in Python easier. It gives developers flexibility and is a more accessible framework for new developers since you can build a web application quickly using only a single Python file.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-cog icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Team members</h4>
+                                    <li>chandhru</li>
+                                    <li>Athivigneshkumar</li>
+                                    <li>lokesh iyyappan</li>
+                                    <li>prasath</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
+{% endblock content %}

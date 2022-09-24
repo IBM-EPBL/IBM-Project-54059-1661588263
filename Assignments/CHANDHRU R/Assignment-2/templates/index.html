@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% block title %}
+    {{title}}
+{% endblock title %}
+{% block content %}
+    {% if succ %}
+        
+        <div class="hero">
+          <p class="alert alert-success" role="alert" style="z-index:1;">{{ succ }}
+          </p>
+          <br>
+          
+          <h1><b>Welcome To....</b></h1>
+          </div>
+      
+          
+    {% else %}
+      <div class="hero">
+        <div class="container-n">
+            <h1><b><em>Welcome To Assignment</em></b></h1>
+        </div>
+      </div>
+            
+    {% endif %}
+{% endblock content %}
