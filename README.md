@@ -1,6 +1,6 @@
 # Inventory Managment System for Retailers
 
-## ASSIGNMENT DETAILS
+> ASSIGNMENT DETAILS
 
 | NAME | ASSIGNMENT-1 | ASSIGNMENT-2 | ASSIGNMENT-3 | ASSIGNMENT-4 |
 |     :---:    |     :---:      |     :---:     |     :---:    |     :---:      |
