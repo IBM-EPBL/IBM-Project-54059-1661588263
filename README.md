@@ -1,4 +1,4 @@
-# Inventory Managment System for Retailers
+![INVENTORY MANAGEMENT SYSTEM](https://user-images.githubusercontent.com/89722457/192199084-b7217d2a-5311-49ad-af28-dadde2f8c3b7.png)
 
 > ASSIGNMENT DETAILS
 
