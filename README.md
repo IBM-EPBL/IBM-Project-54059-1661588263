@@ -1,4 +1,4 @@
-![INVENTORY MANAGEMENT SYSTEM](https://user-images.githubusercontent.com/89722457/192199084-b7217d2a-5311-49ad-af28-dadde2f8c3b7.png)
+![INVENTORY MANAGEMENT SYSTEM (1)](https://user-images.githubusercontent.com/89722457/192203902-875217f5-3944-47a9-b761-7b2b1a96b1ac.png)
 
 > ASSIGNMENT DETAILS
 
