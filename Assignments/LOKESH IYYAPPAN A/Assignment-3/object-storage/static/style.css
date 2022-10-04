@@ -1,0 +1,15 @@
+.carousel-item{
+    height: 755px;
+}
+h5{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 20px;
+    width: 150px;
+}
+p{
+    color: floralwhite;
+    font-weight: bolder;
+    background-color: darkgray;
+    border-radius: 30px;
+}
