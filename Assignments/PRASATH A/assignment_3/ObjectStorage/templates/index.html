@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <title>Image Slider</title>
+    <!--Stylesheet-->
+    <style media="screen">
+    	*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #0690e6;
+}
+.container{
+    background-color: #ffffff;
+    width: 500px;
+    height: 350px;
+
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+.image-container{
+    position: relative;
+}
+img{
+    position: relative;
+    width: 460px;
+		height: 280px;
+    display: none;
+}
+.active{
+    display: block;
+}
+.dot-container{
+    width: 250px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+button{
+    outline: none;
+    cursor: pointer;
+}
+.dot-container button{
+    height: 15px;
+    width: 50px;
+    margin-right: 20px;
+    border-radius: 10%;
+    border: 3px solid #076bb8;
+    background-color: transparent;
+}
+.dot-container button:nth-child(1){
+    background-color: #076bb8;
+}
+#prev,#next{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background-color: #076bb8;
+    color: #ffffff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+#prev{
+    left: 10px;
+}
+#next{
+    right: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://lonewolf.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[0]}}" id="content1" class="active">
+            
+            <img src="https://lonewolf.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[1]}}" id="content2">
+            <img src="https://lonewolf.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[2]}}" id="content3">
+            <img src="https://lonewolf.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[3]}}" id="content4">
+            <img src="https://lonewolf.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[4]}}" id="content5">
+        </div>
+        <div class="dot-container">
+            <button onclick = "dot(1)"></button>
+            <button onclick = "dot(2)"></button>
+            <button onclick = "dot(3)"></button>
+            <button onclick = "dot(4)"></button>
+            <button onclick = "dot(5)"></button>
+        </div>
+        <button id="prev" onclick="prev()"> &lt; </button>
+        <button id="next" onclick="next()"> &gt; </button>
+    </div>
+    <script type="text/javascript">
+let i = 0; // current slide
+let j = 5; // total slides
+
+const dots = document.querySelectorAll(".dot-container button");
+const images = document.querySelectorAll(".image-container img");
+
+function next(){
+    document.getElementById("content" + (i+1)).classList.remove("active");
+    i = ( j + i + 1) % j;
+    document.getElementById("content" + (i+1)).classList.add("active");
+    indicator( i+ 1 );
+}
+
+function prev(){
+    document.getElementById("content" + (i+1)).classList.remove("active");
+    i = (j + i - 1) % j;
+    document.getElementById("content" + (i+1)).classList.add("active");
+    indicator(i+1);
+}
+
+function indicator(num){
+    dots.forEach(function(dot){
+        dot.style.backgroundColor = "transparent";
+    });
+    document.querySelector(".dot-container button:nth-child(" + num + ")").style.backgroundColor = "#076bb8";
+}
+
+function dot(index){
+    images.forEach(function(image){
+        image.classList.remove("active");
+    });
+    document.getElementById("content" + index).classList.add("active");
+    i = index - 1;
+    indicator(index);
+}
+    </script>
+</body>
+</html>
