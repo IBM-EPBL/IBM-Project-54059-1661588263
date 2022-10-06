@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Cloud-Storage</title>
+  </head>
+  <body>
+    <h1 class="cloud-header">Images from cloud</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="img-header">{{files[0]}}</p>
+          <img
+            src="https://inventory-mb.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[0]}}"
+            class="b-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="col">
+          <p class="img-header">{{files[1]}}</p>
+          <img
+            src="https://inventory-mb.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[1]}}"
+            class="b-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <p class="img-header">{{files[2]}}</p>
+          <img
+            src="https://inventory-mb.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[2]}}"
+            class="b-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="col">
+          <p class="img-header">{{files[3]}}</p>
+          <img
+            src="https://inventory-mb.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{files[3]}}"
+            class="b-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
