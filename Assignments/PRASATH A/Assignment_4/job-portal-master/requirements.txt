@@ -1,0 +1,7 @@
+flask 
+flask-restful 
+flask-jwt-extended 
+passlib 
+flask-sqlalchemy
+#Flask-PyMongo
+flask_mongoengine
